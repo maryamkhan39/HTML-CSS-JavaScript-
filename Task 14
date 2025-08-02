@@ -1,336 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YourProduct – Features</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-</head>
-<body>
 
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <h1 class="logo">YourProduct</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourProduct - Features</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="site-title">YourProduct</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
-      <h2>Discover What Makes Us Powerful</h2>
-      <p>Our features help you grow, scale, and succeed.</p>
-      <a href="#" class="btn">Try Now</a>
-    </div>
+    <h2>Discover What Makes Us Powerful</h2>
+    <p>Our features help you grow, scale, and succeed.</p>
+    <button class="cta">Get Started</button>
   </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <h2 class="section-title">Key Features</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Fast Performance</h3>
-          <p>Lightning fast load time for a seamless experience.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-lock"></i>
-          <h3>Secure Data</h3>
-          <p>Industry-standard encryption to protect your info.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-cloud"></i>
-          <h3>Cloud Sync</h3>
-          <p>Access your data anywhere, anytime in the cloud.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-chart-line"></i>
-          <h3>Analytics</h3>
-          <p>Get real-time insights to grow your business.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-mobile-screen-button"></i>
-          <h3>Mobile Ready</h3>
-          <p>Fully responsive design for all screen sizes.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-headset"></i>
-          <h3>24/7 Support</h3>
-          <p>We're here to help you any time, any day.</p>
-        </div>
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-rocket"></i>
+        <h3>Fast Performance</h3>
+        <p>Speed up your work with blazing fast tools.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Security</h3>
+        <p>Built with industry-standard security protocols.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-sync-alt"></i>
+        <h3>Sync Anywhere</h3>
+        <p>Access your data from any device, any time.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-users"></i>
+        <h3>User Friendly</h3>
+        <p>Designed for both beginners and experts.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-cogs"></i>
+        <h3>Customizable</h3>
+        <p>Tailor the platform to your specific needs.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>We’re here to help you any time of the day.</p>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
   <section class="why-us">
-    <div class="container">
-      <h2 class="section-title">Why Choose Us</h2>
-      <ul class="benefits">
-        <li>⚡ Fast Deployment</li>
-        <li>🔒 Enterprise-Grade Security</li>
-        <li>📈 Highly Scalable</li>
-        <li>👨‍💻 Dedicated 24/7 Support</li>
-      </ul>
-    </div>
+    <h2>Why Choose Us?</h2>
+    <ul class="benefits">
+      <li>⚡ Fast Deployment</li>
+      <li>🤝 24/7 Support</li>
+      <li>🌍 Highly Scalable</li>
+      <li>🔒 Secure & Reliable</li>
+    </ul>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="container footer">
-      <ul class="footer-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-      <p>&copy; 2025 YourProduct. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
     </div>
-    <button id="scrollToTop"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="social-icons">
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2025 YourProduct. All rights reserved.</p>
   </footer>
-
-</body>
-</html>
-
-
----
-
-✅ style.css
-
-/* Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Header */
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #2c3e50;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: 600;
-}
-
-.nav-links a:hover {
-  color: #007BFF;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(to right, #007BFF, #00c6ff);
-  color: #fff;
-  text-align: center;
-  padding: 4rem 1rem;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero .btn {
-  margin-top: 1rem;
-  background-color: #fff;
-  color: #007BFF;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.hero .btn:hover {
-  background-color: #e3e3e3;
-}
-
-/* Features */
-.features {
-  padding: 3rem 0;
-  background-color: #f1f1f1;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #333;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.feature-card {
-  background: #fff;
-  padding: 1.5rem;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
-
-.feature-card i {
-  font-size: 2.5rem;
-  color: #007BFF;
-  margin-bottom: 1rem;
-}
-
-.feature-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Why Choose Us */
-.why-us {
-  background: #fff;
-  padding: 3rem 0;
-}
-
-.benefits {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  list-style: none;
-  font-size: 1.1rem;
-  gap: 1.5rem;
-  padding: 1rem 0;
-}
-
-/* Footer */
-footer {
-  background: #2c3e50;
-  color: #fff;
-  padding: 2rem 1rem;
-  position: relative;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: #00c6ff;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.social-icons a:hover {
-  color: #00c6ff;
-}
-
-/* Scroll to Top */
-#scrollToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #007BFF;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  font-size: 1rem;
-  z-index: 100;
-}
-
-
----
-
-✅ script.js
-
-// Scroll to Top Button
-const scrollToTopBtn = document.getElementById("scrollToTop");
-
-window.onscroll = () => {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-};
-
-scrollToTopBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+  
