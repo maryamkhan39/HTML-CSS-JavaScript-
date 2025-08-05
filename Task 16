@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Internship Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Start Your Remote Internship Journey</h1>
+      <p>Learn & earn with flexible, skill-building internships</p>
+      <a href="#contact" class="btn">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2>Why Choose Our Remote Internships?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fas fa-clock fa-2x"></i>
+        <h3>Flexible Timings</h3>
+        <p>Work at your convenience and manage time with ease.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-project-diagram fa-2x"></i>
+        <h3>Real Projects</h3>
+        <p>Gain hands-on experience working on real-time tasks.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-certificate fa-2x"></i>
+        <h3>Certificate on Completion</h3>
+        <p>Get certified to boost your career prospects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+</body>
+</html>
+
+
+---
+
+🎨 style.css
+
+/* Google Font */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  background: #fff;
+  color: #4e54c8;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background: #e0e0e0;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.feature-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+.feature-card i {
+  color: #4e54c8;
+  margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+.contact button {
+  padding: 12px 25px;
+  background: #4e54c8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.contact button:hover {
+  background: #6a6bf0;
+}
+.form-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: green;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 18px;
+  background: #4e54c8;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+#scrollTopBtn:hover {
+  background: #6a6bf0;
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+
+---
+
+⚙️ script.js
+
+// Smooth Scroll (for nav links if added)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    target && target.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// Scroll to Top Button
+const scrollBtn = document.getElementById("scrollTopBtn");
+window.onscroll = function () {
+  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+scrollBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+// Form Validation
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const msgDisplay = document.getElementById("formMessage");
+
+  if (!name || !email || !message) {
+    msgDisplay.textContent = "Please fill in all fields.";
+    msgDisplay.style.color = "red";
+    return;
+  }
+
+  msgDisplay.textContent = "Thank you! Your message has been sent.";
+  msgDisplay.style.color = "green";
+  this.reset();
+});
