@@ -1,0 +1,36 @@
+<!-- Testimonial Card - Maryam -->
+<div class="testimonial-card fade-in">
+  <img src="images/maryam.jpg" alt="Maryam Khan">
+  <h3>Maryam Khan</h3>
+  <p class="role">Web Development Intern</p>
+  <p class="quote">This internship gave me real-world experience and boosted my confidence.</p>
+  <div class="stars">★★★★★</div>
+  <button class="read-more" data-full="This internship gave me real-world experience and boosted my confidence by working on real projects with professional guidance. I learned teamwork, communication, and advanced coding skills.">Read More</button>
+</div>
+
+
+
+
+🖼️ Maryam's Picture
+
+Save Maryam’s image as:
+images/maryam.jpg
+(Make sure it’s placed inside your project’s images folder)
+
+
+
+
+<img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Maryam Khan">
+
+
+
+
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
