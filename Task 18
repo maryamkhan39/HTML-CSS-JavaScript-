@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Certificate Showcase</h1>
+    <p>A collection of successfully completed internships</p>
+  </header>
+
+  <main class="gallery">
+    <!-- Certificate Cards -->
+    <div class="certificate-card">
+      <img src="images/cert1.jpg" alt="Certificate 1" />
+      <h3>Maryam Khan</h3>
+      <p>Web Development Intern</p>
+      <p>Issued: June 2025</p>
+      <button class="view-btn" onclick="openModal('images/cert1.jpg')">View Certificate</button>
+    </div>
+
+    <div class="certificate-card">
+      <img src="images/cert2.jpg" alt="Certificate 2" />
+      <h3>Maryam Khan</h3>
+      <p>Frontend Developer Intern</p>
+      <p>Issued: May 2025</p>
+      <button class="view-btn" onclick="openModal('images/cert2.jpg')">View Certificate</button>
+    </div>
+
+    <!-- Add 4-6 more similar cards here -->
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="Full Certificate" />
+  </div>
+
+  <!-- Scroll-to-Top Button -->
+  <button onclick="scrollToTop()" id="topBtn" title="Go to top">⬆</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+---
+
+✅ css/style.css
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.certificate-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.view-btn {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Scroll to Top Button */
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Responsive Cards */
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+---
+
+✅ js/script.js
+
+// Modal Popup
+function openModal(src) {
+  document.getElementById('modal').style.display = 'block';
+  document.getElementById('modal-img').src = src;
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+
+// Scroll to Top
+const topBtn = document.getElementById('topBtn');
+window.onscroll = function () {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
