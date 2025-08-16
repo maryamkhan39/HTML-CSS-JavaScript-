@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGear Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #00bcd4, #009688);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #fff;
+      color: #009688;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #222;
+      color: #fff;
+    }
+
+    .products {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .products h2 {
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .price {
+      color: #009688;
+      font-weight: bold;
+    }
+
+    .contact {
+      padding: 40px 20px;
+      background: #eee;
+    }
+
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #009688;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>TechGear Store</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h2>Explore the Latest Tech Products</h2>
+    <p>Find the perfect gadget for your needs.</p>
+    <a href="#products"><button class="btn">Shop Now</button></a>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <h2>Our Featured Products</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/250x180" alt="Product 1">
+        <h3>Smartphone X</h3>
+        <p>High performance and sleek design.</p>
+        <p class="price">$499</p>
+        <button class="btn viewDetails">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250x180" alt="Product 2">
+        <h3>Wireless Headphones</h3>
+        <p>Immersive sound quality.</p>
+        <p class="price">$199</p>
+        <button class="btn viewDetails">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250x180" alt="Product 3">
+        <h3>Smartwatch Pro</h3>
+        <p>Track your fitness and stay connected.</p>
+        <p class="price">$299</p>
+        <button class="btn viewDetails">View Details</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250x180" alt="Product 4">
+        <h3>Laptop Ultra</h3>
+        <p>Lightweight and powerful for daily use.</p>
+        <p class="price">$999</p>
+        <button class="btn viewDetails">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Have Questions?</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <p id="formMessage" style="text-align:center; color:green; font-weight:bold;"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 TechGear Store. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modalTitle">Product Title</h3>
+      <p id="modalDesc">Product details go here...</p>
+    </div>
+  </div>
+
+  <script>
+    // Scroll to top
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      if (document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    scrollBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Contact form validation
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (name === "" || email === "" || message === "") {
+        formMessage.style.color = "red";
+        formMessage.textContent = "All fields are required.";
+      } else if (!email.match(emailPattern)) {
+        formMessage.style.color = "red";
+        formMessage.textContent = "Please enter a valid email address.";
+      } else {
+        formMessage.style.color = "green";
+        formMessage.textContent = "Your message has been sent successfully!";
+        form.reset();
+      }
+    });
+
+    // Modal functionality
+    const modal = document.getElementById("productModal");
+    const closeBtn = document.querySelector(".close");
+    const viewButtons = document.querySelectorAll(".viewDetails");
+
+    viewButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const product = btn.parentElement;
+        const title = product.querySelector("h3").innerText;
+        const desc = product.querySelector("p").innerText;
+
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDesc").innerText = desc;
+
+        modal.style.display = "flex";
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
