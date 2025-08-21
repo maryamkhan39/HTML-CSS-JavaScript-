@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Frequently Asked Questions</h1>
+    <p class="subtitle">Answers to your most common questions</p>
+  </header>
+
+  <!-- FAQ Section -->
+  <section class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">What is this internship about?</button>
+      <div class="faq-answer">This internship helps you practice real-world web development tasks using HTML, CSS, and JavaScript.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do I need prior experience?</button>
+      <div class="faq-answer">Basic understanding of HTML, CSS, and JavaScript is enough to get started.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How many tasks are included?</button>
+      <div class="faq-answer">The internship includes multiple structured tasks, each focused on specific web development skills.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Will I get a certificate?</button>
+      <div class="faq-answer">Yes, after successfully completing the tasks, you’ll receive a verified internship certificate.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How long do I have to complete each task?</button>
+      <div class="faq-answer">Each task is designed to be completed within 2–3 hours of focused work.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I showcase my tasks on GitHub?</button>
+      <div class="faq-answer">Absolutely! Uploading your work to GitHub or deploying live demos is highly encouraged.</div>
+    </div>
+  </section>
+
+  <!-- Optional JS Buttons -->
+  <div class="controls">
+    <button id="expandAll">Expand All</button>
+    <button id="collapseAll">Collapse All</button>
+    <button id="scrollTop">Scroll to Top</button>
+    <button id="toggleMode">Light/Dark Mode</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+---
+
+🎨 style.css
+
+/* Google Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6fa;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #4a90e2;
+  color: #fff;
+}
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* FAQ Section */
+.faq-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.faq-item {
+  background: #fff;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  background: #fafafa;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+/* Controls */
+.controls {
+  text-align: center;
+  margin: 2rem;
+}
+.controls button {
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4a90e2;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.controls button:hover {
+  background: #357ab8;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #1e1e1e;
+  color: #eee;
+}
+body.dark .header {
+  background: #222;
+}
+body.dark .faq-item {
+  background: #333;
+}
+body.dark .faq-answer {
+  background: #2a2a2a;
+}
+
+
+---
+
+⚡ script.js
+
+// FAQ Toggle
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach(faq => {
+  faq.querySelector(".faq-question").addEventListener("click", () => {
+    faqs.forEach(item => {
+      if(item !== faq) item.classList.remove("active");
+    });
+    faq.classList.toggle("active");
+  });
+});
+
+// Expand/Collapse All
+document.getElementById("expandAll").addEventListener("click", () => {
+  faqs.forEach(faq => faq.classList.add("active"));
+});
+document.getElementById("collapseAll").addEventListener("click", () => {
+  faqs.forEach(faq => faq.classList.remove("active"));
+});
+
+// Scroll to Top
+document.getElementById("scrollTop").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Dark/Light Mode
+document.getElementById("toggleMode").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
